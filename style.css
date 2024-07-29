@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    margin: 0;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 35px;
+    height: 30px;
+    display: block;
+    padding: 0 8px 0 0;
+}
+
+.logo p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: auto 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    margin: auto 0;
+}
+
+nav li {
+    padding: 0 20px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a {
+    text-decoration: none;
+    color: #141414;
+    cursor: pointer;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Header */
+
+header {
+    background-color: aqua;
+    padding: 75px 20px 25px;
+    margin: 15px 0;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+header p {
+    font-size: 18px;
+    padding: 10px 0
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+.date {
+    padding: 5px 0 0 0;
+}
+
+
+/* Images */
+.thumbnail {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+
+main {
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-template-areas:
+        "blog1"
+        "blog2"
+        "blog3"
+        "blog4"
+        "blog5"
+        "blog6";
+    margin: 0 1.5em;
+}
+
+section {
+    margin: 25px 0 15px 0
+}
+
+.blog-one {
+    grid-area: blog1;
+}
+
+.blog-two {
+    grid-area: blog2;
+}
+
+.blog-three {
+    grid-area: blog3;
+}
+
+.blog-four {
+    grid-area: blog4;
+}
+
+.blog-five {
+    grid-area: blog5;
+}
+
+.blog-six {
+    grid-area: blog6;
+}
+
+
+@media (min-width:480px) {
+    main {
+        margin: 0 2.5em;
+    }
+
+    .logo p {
+        font-size: 24px;
+
+    }
+
+    .logo img {
+        width: 50px;
+        height: 45px;
+    }
+
+    nav li {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:768px) {
+    main {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "blog1 blog1 blog1 blog2 blog2 blog2"
+            "blog3 blog3 blog3 blog4 blog4 blog4"
+            "blog5 blog5 blog5 blog6 blog6 blog6"
+        ;
+        grid-gap: 2em;
+        margin: 0 5em;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+
+@media (min-width:1024px) {
+
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "blog1 blog1 blog1 blog1 blog2 blog2 blog2 blog2 blog3 blog3 blog3 blog3"
+            "blog4 blog4 blog4 blog4 blog5 blog5 blog5 blog5 blog6 blog6 blog6 blog6"
+        ;
+        grid-gap: 2em;
+        margin: 0 5em;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header p {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+}
