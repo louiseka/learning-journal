@@ -9,12 +9,20 @@ body {
     margin: 0;
 }
 
+.blog-page {
+    background-color: #fafafa;
+    padding: 40px 10px;
+}
+
+
+
 /* Nav */
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 10px 15px;
+    padding: 20px 10px;
 }
 
 .logo {
@@ -61,11 +69,13 @@ nav a:hover {
 
 /* Header */
 
-header {
+.home-header {
     background-color: aqua;
     padding: 75px 20px 25px;
     margin: 15px 0;
 }
+
+
 
 /* Typography */
 
@@ -73,9 +83,29 @@ h1 {
     font-size: 36px;
 }
 
+.blog-page h1 {
+    padding: 0 0 20px 0;
+}
+
 h2 {
     font-size: 24px;
     padding: 10px 0;
+}
+
+h2 a {
+    text-decoration: none;
+    color: #141414;
+    cursor: pointer;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 0;
+    padding: 40px 0 0 0;
 }
 
 header p {
@@ -100,9 +130,16 @@ p {
     margin: 0 auto;
 }
 
+.blog-img {
+    width: 100%;
+    padding: 30px 0;
+}
+
 /* Grid Layout */
 
-main {
+.homepage main,
+.related-blogs,
+article {
     display: grid;
     grid-template-columns: 1, 1fr;
     grid-template-areas:
@@ -144,8 +181,10 @@ section {
 }
 
 
+
+
 @media (min-width:480px) {
-    main {
+    .homepage {
         margin: 0 2.5em;
     }
 
@@ -162,10 +201,16 @@ section {
     nav li {
         font-size: 18px;
     }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
 }
 
 @media (min-width:768px) {
-    main {
+    .homepage {
+        display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas:
             "blog1 blog1 blog1 blog2 blog2 blog2"
@@ -175,6 +220,14 @@ section {
         grid-gap: 2em;
         margin: 0 5em;
     }
+
+    .related-blogs {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "blog2 blog2 blog3 blog3 blog4 blog4";
+        grid-gap: 2em;
+    }
+
 
     header {
         text-align: center;
@@ -192,14 +245,15 @@ section {
 
 @media (min-width:1024px) {
 
-    main {
+    .homepage {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas:
             "blog1 blog1 blog1 blog1 blog2 blog2 blog2 blog2 blog3 blog3 blog3 blog3"
             "blog4 blog4 blog4 blog4 blog5 blog5 blog5 blog5 blog6 blog6 blog6 blog6"
         ;
         grid-gap: 2em;
-        margin: 0 5em;
+        margin: 0 auto;
+        max-width: 1000px;
     }
 
     header {
@@ -210,13 +264,20 @@ section {
         font-size: 24px;
     }
 
-    p {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
     h1 {
         font-size: 48px;
+    }
+
+    article,
+    .related-blogs,
+    header h1,
+    header p {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .blog-page {
+        padding: 80px 0;
     }
 
 }
