@@ -7,61 +7,63 @@
 body {
     font-family: "Source Sans 3", sans-serif;
     margin: 0;
+    background-color: #fafafa;
 }
 
 .blog-page,
 .about-page {
-    background-color: #fafafa;
-    padding: 40px 10px;
+    padding: 2.5em 0.625em;
 }
 
 /* Nav */
-nav {
+nav,
+.logo,
+nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 15px;
-    padding: 20px 10px;
 }
 
-.logo {
-    display: flex;
+nav {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.625em 0.95em;
+    padding: 1.25em 0.625em;
 }
 
 .logo img {
     width: 35px;
     height: 30px;
     display: block;
-    padding: 0 8px 0 0;
+    padding: 0 0.5em 0 0;
 }
 
 .logo p {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* 18px */
     margin: auto 0;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
     justify-content: end;
     margin: auto 0;
 }
 
 nav li {
-    padding: 0 20px 0 0;
-    font-size: 16px;
+    padding: 0 1.25em 0 0;
+    font-size: 1rem;
+    /* 16px */
     font-weight: 500;
 }
 
-nav a {
+a {
     text-decoration: none;
     color: #141414;
     cursor: pointer;
 }
 
-nav a:hover {
+a:hover {
     text-decoration: underline;
 }
 
@@ -70,8 +72,8 @@ nav a:hover {
 
 .home-header {
     background-color: #e5e4e4;
-    padding: 75px 20px 25px;
-    margin: 15px 0;
+    padding: 4.65em 1.25em 1.55em;
+    margin: 0.95em 0;
 }
 
 .profile-head {
@@ -79,30 +81,33 @@ nav a:hover {
     justify-content: space-between;
     flex-direction: column;
     margin: auto 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 1.25em 0;
 }
 
 /* Footer */
 
 footer {
-    padding: 30px 0;
+    padding: 1.875em 0;
+    margin: 6.25em 0 0 0;
     background-color: #202020;
 }
 
 footer p {
     text-align: center;
-    font-size: 14px;
+    font-size: 0.88rem;
+    /* 14px */
     color: #ececec;
 }
 
 /* Typography */
 
 h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
+    /* 36px */
 }
 
 .blog-page h1 {
-    padding: 0 0 20px 0;
+    padding: 0 0 0.55em 0;
 }
 
 .profile-head h1 {
@@ -111,43 +116,36 @@ h1 {
 
 .profile-head h1,
 .profile-head p {
-    padding: 10px 0;
+    padding: 0.625em 0;
 }
 
 h2 {
-    font-size: 24px;
-    padding: 10px 0;
-}
-
-h2 a {
-    text-decoration: none;
-    color: #141414;
-    cursor: pointer;
-}
-
-h2 a:hover {
-    text-decoration: underline;
+    font-size: 1.5rem;
+    /* 24px */
+    padding: 0.42em 0;
 }
 
 h3 {
-    font-size: 22px;
-    margin: 0;
-    padding: 40px 0 0 0;
+    font-size: 1.375rem;
+    /* 22px */
+    padding: 1.81em 0 0 0;
 }
 
 header p {
-    font-size: 18px;
-    padding: 10px 0
+    font-size: 1.125rem;
+    /* 18px */
+    padding: 0.55em 0
 }
 
 h1,
 h2,
+h3,
 p {
     margin: 0;
 }
 
 .date {
-    padding: 5px 0 0 0;
+    padding: 0.31em 0 0 0;
 }
 
 
@@ -159,14 +157,14 @@ p {
 
 .blog-img {
     width: 100%;
-    padding: 30px 0;
+    padding: 1.88em 0;
 }
 
 .profile-img {
     width: 200px;
     height: 200px;
     display: flex;
-    padding: 0 0 10px 0;
+    padding: 0 0 0.625em 0;
 }
 
 /* Grid Layout */
@@ -187,7 +185,7 @@ article {
 }
 
 section {
-    margin: 25px 0 15px 0
+    margin: 1.55em 0 0.95em 0;
 }
 
 .blog-one {
@@ -215,7 +213,7 @@ section {
 }
 
 
-
+/* Media Queries */
 
 @media (min-width:480px) {
     .homepage {
@@ -223,8 +221,8 @@ section {
     }
 
     .logo p {
-        font-size: 24px;
-
+        font-size: 1.5rem;
+        /* 24px */
     }
 
     .logo img {
@@ -233,11 +231,13 @@ section {
     }
 
     nav li {
-        font-size: 18px;
+        font-size: 1.125rem;
+        /* 18px */
     }
 
     p {
-        font-size: 18px;
+        font-size: 1.125rem;
+        /* 18px */
         line-height: 1.5;
     }
 }
@@ -268,11 +268,13 @@ section {
     }
 
     header p {
-        font-size: 20px;
+        font-size: 1.25rem;
+        /* 20px */
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
+        /* 40px */
     }
 
     .profile-head {
@@ -299,11 +301,13 @@ section {
     }
 
     header p {
-        font-size: 24px;
+        font-size: 1.5rem;
+        /* 24px */
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 3rem;
+        /* 48px*/
     }
 
     article,
@@ -316,7 +320,7 @@ section {
 
     .blog-page,
     .about-page {
-        padding: 80px 0;
+        padding: 5em 0;
     }
 
 }
